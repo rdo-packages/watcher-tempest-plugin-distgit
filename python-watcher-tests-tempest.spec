@@ -19,7 +19,7 @@ Additionally it provides a plugin to automatically load these tests into Tempest
 
 Name:       python-%{service}-tests-tempest
 Version:    0.0.1
-Release:    0.1%{?alphatag}%{?dist}
+Release:    0.2%{?alphatag}%{?dist}
 Summary:    Tempest Integration of Watcher Project
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}/
@@ -39,6 +39,8 @@ BuildRequires:  python-pbr
 BuildRequires:  python-setuptools
 BuildRequires:  git
 BuildRequires:  openstack-macros
+
+Obsoletes:  python-watcher-tests-tempest > 1.4.1
 
 Requires:   python-pbr
 Requires:   python-six  >= 1.9.0
@@ -126,5 +128,8 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Wed Aug 30 2017 Chandan Kumar <chkumar@redhat.com> 0.0.1-0.2.2a084eb2git
+- Obsoletes python-watcher-tests-tempest-1.4.1 intree plugin
+
 * Wed Aug 30 2017 Chandan Kumar <chkumar@redhat.com> 0.0.1-0.1.2a084eb2git
 - Update to pre-release 0.0.1 (2a084eb2d599436ae3b87ecbb1ef9bd61f52776b)
