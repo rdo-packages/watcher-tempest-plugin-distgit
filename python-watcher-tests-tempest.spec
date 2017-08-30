@@ -1,9 +1,13 @@
+%{!?upstream_version: %global upstream_version %{commit}}
+%global commit 2a084eb2d599436ae3b87ecbb1ef9bd61f52776b
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
+
 %global service watcher
 %global plugin watcher-tempest-plugin
 %global module watcher_tempest_plugin
 %global with_doc 1
-
-%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %if 0%{?fedora}
 %global with_python3 1
@@ -14,13 +18,13 @@ This package contains Tempest tests to cover the watcher project. \
 Additionally it provides a plugin to automatically load these tests into Tempest.
 
 Name:       python-%{service}-tests-tempest
-Version:    XXX
-Release:    XXX
+Version:    0.0.1
+Release:    0.1%{?alphatag}%{?dist}
 Summary:    Tempest Integration of Watcher Project
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}/
 
-Source0:    http://tarballs.openstack.org/%{plugin}/%{plugin}-%{upstream_version}.tar.gz
+Source0:    https://github.com/openstack/%{plugin}/archive/%{commit}.tar.gz#/%{plugin}-%{shortcommit}.tar.gz
 
 BuildArch:  noarch
 
@@ -122,3 +126,5 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Wed Aug 30 2017 Chandan Kumar <chkumar@redhat.com> 0.0.1-0.1.2a084eb2git
+- Update to pre-release 0.0.1 (2a084eb2d599436ae3b87ecbb1ef9bd61f52776b)
