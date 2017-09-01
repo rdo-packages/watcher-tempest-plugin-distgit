@@ -14,6 +14,7 @@ This package contains Tempest tests to cover the watcher project. \
 Additionally it provides a plugin to automatically load these tests into Tempest.
 
 Name:       python-%{service}-tests-tempest
+Epoch:      1
 Version:    XXX
 Release:    XXX
 Summary:    Tempest Integration of Watcher Project
