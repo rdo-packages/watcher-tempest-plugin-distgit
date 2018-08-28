@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_fc899ccb",
+        "filename": "python-watcher-tests-tempest.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2018-08-28T04:14:09Z",
+      "side": 1,
+      "message": "It should be updated with tarballs.openstack.org",
+      "range": {
+        "startLine": 25,
+        "startChar": 11,
+        "endLine": 25,
+        "endChar": 122
+      },
+      "revId": "5b4a62af66e21ea738bdbc1e335e4a8d362ce94b",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
