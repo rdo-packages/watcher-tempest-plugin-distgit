@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_9a739780",
+        "filename": "python-watcher-tests-tempest.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2018-10-23T16:27:45Z",
+      "side": 1,
+      "message": "There\u0027s no need for the python_provide in the doc subpackage.",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 78
+      },
+      "revId": "1307bb5ae7ffee72ccb4bea22a8c7fa0c8b4e9cc",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
