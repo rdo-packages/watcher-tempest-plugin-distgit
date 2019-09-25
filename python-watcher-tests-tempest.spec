@@ -49,6 +49,7 @@ Requires:   python%{pyver}-six  >= 1.10.0
 Requires:   python%{pyver}-tempest >= 1:18.0.0
 Requires:   python%{pyver}-oslo-utils >= 3.33.0
 Requires:   python%{pyver}-oslo-log >= 3.36.0
+Requires:   python%{pyver}-os-traits
 
 %description -n python%{pyver}-%{service}-tests-tempest
 %{common_desc}
