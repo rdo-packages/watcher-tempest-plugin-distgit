@@ -45,7 +45,7 @@ BuildRequires:  python3-devel
 BuildRequires:  python3-pbr
 BuildRequires:  python3-setuptools
 
-Requires:   python3-pbr >= 3.1.1
+Requires:   python3-pbr >= 2.0.0
 Requires:   python3-six  >= 1.10.0
 Requires:   python3-tempest >= 1:18.0.0
 Requires:   python3-oslo-utils >= 3.33.0
