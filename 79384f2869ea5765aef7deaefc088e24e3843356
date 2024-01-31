@@ -1,0 +1,8 @@
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Workflow+1: Joel Capitao <jcapitao@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 31 Jan 2024 09:26:39 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/watcher-tempest-plugin-distgit/+/51436
+Project: openstack/watcher-tempest-plugin-distgit
+Branch: refs/heads/antelope-rdo
