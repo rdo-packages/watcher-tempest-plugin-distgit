@@ -55,6 +55,12 @@ Requires:   python3-os-traits
 %description -n python3-%{service}-tests-tempest
 %{common_desc}
 
+# Needed for running watcher tempest plugin functional tests
+# to test watcher/openstack optimize cli
+Requires:  python3-openstckclient
+Requires:  python3-watcherclient
+
+
 %if 0%{?with_doc}
 %package -n python-%{service}-tests-tempest-doc
 Summary:        python-%{service}-tests-tempest documentation
