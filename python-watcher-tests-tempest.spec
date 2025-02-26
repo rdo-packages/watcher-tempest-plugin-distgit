@@ -15,7 +15,8 @@
 
 %global common_desc \
 This package contains Tempest tests to cover the watcher project. \
-Additionally it provides a plugin to automatically load these tests into Tempest.
+Additionally it provides a plugin to automatically load these tests \
+into Tempest.
 
 Name:       python-%{service}-tests-tempest
 Epoch:      1
@@ -52,9 +53,15 @@ Summary: %{summary}
 %description -n python3-%{service}-tests-tempest
 %{common_desc}
 
+# Needed for running watcher tempest plugin functional tests
+# to test watcher/openstack optimize cli
+Requires:  python3-openstackclient
+Requires:  python3-watcherclient
+
+
 %if 0%{?with_doc}
 %package -n python-%{service}-tests-tempest-doc
-Summary:        python-%{service}-tests-tempest documentation
+Summary:        Python watcher tempest tests documentation
 
 %description -n python-%{service}-tests-tempest-doc
 It contains the documentation for the watcher tempest plugin.
@@ -98,6 +105,9 @@ done
 %tox -e docs
 # remove the sphinx build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
+# Fix file-not-utf8 rpmlint
+iconv -f iso8859-1 -t utf-8 doc/build/html/objects.inv > doc/build/html/objects.inv.conv
+cd doc/build/html/ && mv -fv objects.inv.conv objects.inv
 %endif
 
 %install
