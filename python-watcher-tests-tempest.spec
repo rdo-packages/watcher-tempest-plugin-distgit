@@ -118,3 +118,4 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/watcher-tempest-plugin/commit/4fc1253844fb23bc4540f89d025775b7f525bae9
