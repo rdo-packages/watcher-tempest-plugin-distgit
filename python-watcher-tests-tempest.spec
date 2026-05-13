@@ -6,8 +6,7 @@
 %global with_doc 1
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
-%{?dlrn: %global tarsources %{plugin}}
-%{!?dlrn: %global tarsources %{module}}
+%global tarsources %{module}
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order bashate
 # Exclude sphinx from BRs if docs are disabled
